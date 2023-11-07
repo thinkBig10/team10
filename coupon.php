@@ -105,28 +105,28 @@ Time) -->
                         <div class="div-block-6">
                             <div class="div-block-8">
                                 <div class="div-block-7 coupon_rank_col">RANK</div>
-                                <div class="div-block-7 productnamecol">expirationDate</div>
-                                <div class="div-block-7 brandnamecol">discountRate</div>
-                                <div class="div-block-7">minFee</div>
+                                <div class="div-block-7 productnamecol">EXPIRATION DATE</div>
+                                <div class="div-block-7 brandnamecol">DISCOUNT RATE</div>
+                                <div class="div-block-7">MINFEE</div>
                             </div>
 
                             <!--내부 스크롤 .couponShowBlock { max-height: 290px; overflow-y: auto; }-->
                             <div class='couponShowBlock'>
-                              <?php
+                            <?php
                                 $mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
 
                                 if (mysqli_connect_errno()) {
                                   printf("Connect failed: %s\n", mysqli_connect_error());
                                   exit();
                                 } else {
-                                  $query = "SELECT rank, expirationDate, discountRate, minFee FROM coupons";
+                                  $query = "SELECT couponID, rank, expirationDate, discountRate, minFee FROM coupons";
                                   $result = mysqli_query($mysqli, $query);
 
                                   while ($row = mysqli_fetch_assoc($result)) {
                                     echo "<div class='div-block-8'>
                                       <div class='form-block-4 w-form'>
-                                        <form id='email-form-2' name='email-form-2' data-name='Email Form 2' method='get' class='form-6' data-wf-page-id='65473ffbf69dd5d112a33a88' data-wf-element-id='b30baabe-ca56-adbb-2114-5c1742e912e2'><label class='w-checkbox'><input type='checkbox' id='checkbox-2' name='checkbox-2' data-name='Checkbox 2' class='w-checkbox-input'><span class='w-form-label' for='checkbox-2'>X</span></label></form>
-                                        <div class='w-form-done'>
+                                        <input type='button' value='x' class='delete-button' onclick='deleteCoupon(" . $row['couponID'] . ")'>
+                                      <div class='w-form-done'>
                                           <div>Thank you! Your submission has been received!</div>
                                         </div>
                                         <div class='w-form-fail'>
@@ -149,9 +149,6 @@ Time) -->
                     </div>
                     <div class="div-block-21">
                         <div class="coupon_formblock w-form">
-                            <!--<form id="email-form" name="email-form" data-name="Email Form" method="get"
-                            class="form-5" data-wf-page-id="65473ffbf69dd5d112a33a88"
-                            data-wf-element-id="b30baabe-ca56-adbb-2114-5c1742e91364">-->
                             <form
                                 action="coupon.php"
                                 id="email-form"
@@ -162,19 +159,17 @@ Time) -->
                                 data-wf-page-id="65473ffbf69dd5d112a33a88"
                                 data-wf-element-id="b30baabe-ca56-adbb-2114-5c1742e91364"
                                 onsubmit="return validateForm()">
-                                <!--<input type="submit" value="Submit" data-wait="Please wait..."
-                                class="submit-button-3 w-button">-->
+                                
                                 <input
                                     type="submit"
                                     name="submit"
                                     value="Insert Record"
                                     data-wait="Please wait..."
-                                    class="submit-button-3 w-button">
+                                    class="submit-button-3 w-button"
+                                >
+                                
                                 <div class="coupon_rankclick_block">
-
                                     <label id="rank_gold" class="w-checkbox">
-                                        <!--<input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox"
-                                        class="w-checkbox-input">-->
                                         <input
                                             type="checkbox"
                                             id="checkbox"
@@ -211,7 +206,7 @@ Time) -->
                                     maxlength="256"
                                     name="field"
                                     data-name="Field"
-                                    placeholder="Example Text"
+                                    placeholder="Expiration Date"
                                     id="field"
                                     required="">
                                 <input
@@ -220,7 +215,7 @@ Time) -->
                                     maxlength="256"
                                     name="field-2"
                                     data-name="Field 2"
-                                    placeholder="Example Text"
+                                    placeholder="Discount Rate"
                                     id="field-2"
                                     required="">
                                 <input
@@ -229,7 +224,7 @@ Time) -->
                                     maxlength="256"
                                     name="field-3"
                                     data-name="Field 3"
-                                    placeholder="Example Text"
+                                    placeholder="Min Fee"
                                     id="field-3"
                                     required="">
                             </form>
@@ -246,7 +241,7 @@ Time) -->
             </div>
         </div>
 
-        <?php
+    <?php
           $mysqli = mysqli_connect("localhost","team10","team10","team10");
 
           if (mysqli_connect_errno()) {
@@ -273,11 +268,12 @@ Time) -->
                           VALUES ('$rank', '".$_POST["field"]."', '".$_POST["field-2"]."', '".$_POST["field-3"]."');";
                   $res = mysqli_query($mysqli, $sql);
 
-                  if ($res === TRUE) {
-                      // 커밋
+                  if ($res) {
+                      // commit
                       mysqli_commit($mysqli);
+                      echo "<meta http-equiv='refresh' content='0'>";
                   } else {
-                      // 롤백
+                      // rollback
                       mysqli_rollback($mysqli);
                   }
               }
@@ -287,12 +283,32 @@ Time) -->
         ?>
 
         <script>
+            function deleteCoupon(couponID) {
+                if (confirm("Are you sure you want to delete it?")) {
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "deleteCoupon.php", true);
+                    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            location.reload();
+                        }
+                    }
+                    xhr.send("couponID=" + couponID);
+                }
+            }
+        </script>
+
+        <script>
             function validateForm() {
                 var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
                 if (checkboxes.length > 1) {
                     alert("Please select only one checkbox.");
                     return false;
-                }
+                }else if (checkboxes.length == 0){
+                    alert("Please select one checkbox.");
+                    return false;
+                }       
+
                 return true;
             }
         </script>
