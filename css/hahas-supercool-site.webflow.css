@@ -1674,4 +1674,7 @@ body {
   grid-template-columns: 1fr;
 }
 
-
+.couponShowBlock {
+  max-height: 290px;
+  overflow-y: auto;
+}
