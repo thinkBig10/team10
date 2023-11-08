@@ -62,16 +62,16 @@
     <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e3b-0e075d33" class="w-layout-cell content">
       <div class="div-block-9 qnanav">
         <a id="qna_restock" href="qna_general.php" class="button w-button">GENERAL</a>
-        <a id="qna_service" href="qna_product.php" class="button w-button">PRODUCT</a>
+        <a id="qna_service" href="qna_product.php" class="button clicked w-button">PRODUCT</a>
         <a id="qna_delivery" href="qna_shipping.php" class="button w-button">SHIPPING</a>
-        <a id="qna_refund" href="qna.php" class="button clicked w-button">TOTAL</a>
+        <a id="qna_refund" href="qna.php" class="button w-button">TOTAL</a>
       </div> 
 
         <?php
         $mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
         if($mysqli){
           $sql = "
-          select * from qna;  
+          select * from qna where type='Product';  
           "; 
           $res = mysqli_query($mysqli,$sql);
           if ($res) {

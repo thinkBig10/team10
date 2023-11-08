@@ -25,11 +25,6 @@
           t = " w-mod-";
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
       }(window, document);
-
-              // Input submit 요소를 클릭했을 때 링크를 클릭하도록 설정
-              document.getElementById("updatebtn").addEventListener("click", function (e) {
-            document.getElementById("link").click(); // 링크를 클릭
-        });
     </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
@@ -79,12 +74,6 @@
           </form>';
 
           ?>
-        <!-- <div class="w-form-done">
-          <div>Thank you! Your submission has been received!</div>
-        </div>
-        <div class="w-form-fail">
-          <div>Oops! Something went wrong while submitting the form.</div>
-        </div> -->
       </div>
     </div>
   </div>

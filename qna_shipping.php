@@ -63,15 +63,15 @@
       <div class="div-block-9 qnanav">
         <a id="qna_restock" href="qna_general.php" class="button w-button">GENERAL</a>
         <a id="qna_service" href="qna_product.php" class="button w-button">PRODUCT</a>
-        <a id="qna_delivery" href="qna_shipping.php" class="button w-button">SHIPPING</a>
-        <a id="qna_refund" href="qna.php" class="button clicked w-button">TOTAL</a>
+        <a id="qna_delivery" href="qna_shipping.php" class="button clicked w-button">SHIPPING</a>
+        <a id="qna_refund" href="qna.php" class="button w-button">TOTAL</a>
       </div> 
 
         <?php
         $mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
         if($mysqli){
           $sql = "
-          select * from qna;  
+          select * from qna where type='Shipping';  
           "; 
           $res = mysqli_query($mysqli,$sql);
           if ($res) {

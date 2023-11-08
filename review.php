@@ -61,8 +61,8 @@
     </div>
     <div id="w-node-_60a055be-d1fc-b8f4-ffed-127c599633e9-0e075d35" class="w-layout-cell content">
       <div class="div-block reviewnav">
-        <a href="review_past_month.php" class="reviewbtn w-button">PAST MONTH</a>
-        <a href="review.php" class="reviewbtn w-button">Total</a>
+        <a href="review_past_month.php" class="button w-button">PAST MONTH</a>
+        <a href="review.php" class="button clicked w-button">Total</a>
       </div>
       <div class="div-block-2">
         <br>
