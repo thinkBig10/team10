@@ -25,6 +25,11 @@
           t = " w-mod-";
         n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch")
       }(window, document);
+
+              // Input submit 요소를 클릭했을 때 링크를 클릭하도록 설정
+              document.getElementById("updatebtn").addEventListener("click", function (e) {
+            document.getElementById("link").click(); // 링크를 클릭
+        });
     </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
@@ -39,7 +44,7 @@
       <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
       <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
       <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.html" class="nav-btn replyqna w-nav-link">Q&amp;A</a>
+      <a href="qna.php" class="nav-btn replyqna w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
@@ -61,13 +66,25 @@
     </div>
     <div id="w-node-_990be46c-46c2-6338-093e-ab5c115974a7-0e075d34" class="w-layout-cell content replycell">
       <div class="form-block w-form">
-        <form id="relyqna_form" name="wf-form-commentform" data-name="commentform" method="post" class="replyform" data-wf-page-id="6545eca4ff3677790e075d34" data-wf-element-id="c3ad7640-86b3-7213-e56d-3c15a7fa761b"><label for="replycomment" class="field-label-4">COMMENT</label><textarea placeholder="Sample..." maxlength="5000" id="replycomment" name="field" data-name="Field" class="w-input"></textarea><input type="submit" value="UPDATE" data-wait="Please wait..." id="updatebtn" class="submit-button-2 w-button"></form>
-        <div class="w-form-done">
+        <?php
+          if (isset($_GET['data'])) {
+            $receivedData = $_GET['data'];
+          }
+
+          echo '<form id="relyqna_form"  action ="replyRequest.php" method="post" name="wf-form-commentform" data-name="commentform"  class="replyform" data-wf-page-id="6545eca4ff3677790e075d34" data-wf-element-id="c3ad7640-86b3-7213-e56d-3c15a7fa761b">
+          <label for="replycomment" class="field-label-4">COMMENT</label>
+          <input type = "text"  value= "'.$receivedData.'" name ="idField" maxlength="100" class="w-input" style="display: none">
+          <input type = "text" name ="field" placeholder="Sample..." maxlength="5000" name = "field"  data-name="Field" class="w-input">
+          <input type="submit" value="UPDATE" data-wait="Please wait..." id="updatebtn" class="submit-button-2 w-button">
+          </form>';
+
+          ?>
+        <!-- <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

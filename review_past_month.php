@@ -61,21 +61,44 @@
     </div>
     <div id="w-node-_60a055be-d1fc-b8f4-ffed-127c599633e9-0e075d35" class="w-layout-cell content">
       <div class="div-block reviewnav">
-        <a href="#" class="reviewbtn w-button">PAST WEEK</a>
+        <a href="review_past_month.php" class="reviewbtn w-button">PAST MONTH</a>
+        <a href="review.php" class="reviewbtn w-button">Total</a>
       </div>
       <div class="div-block-2">
-        <div id="reviewdata1" class="div-block-4">
-          <h4 id="reviewdata1_userid" class="reviewinfo">user_niceguy</h4>
-          <h4 id="reviewdata1_date" class="reviewinfo">2023.11.02.</h4>
-          <h4 id="reviewdata1_rating" class="reviewinfo">★★★★★</h4>
-          <p id="reviewdata1_comment" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-        </div>
-        <div id="reviewdata2" class="div-block-4">
-          <h4 class="reviewinfo">thebatman</h4>
-          <h4 class="reviewinfo">2023.10.31.</h4>
-          <h4 class="reviewinfo">★★★★★</h4>
-          <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
-        </div>
+        <br>
+        <?php
+        $mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
+        if($mysqli){
+          $sql = "
+          select * from reviews R join products P on R.productID = P.productID WHERE date BETWEEN DATE_ADD(NOW(), INTERVAL -1 MONTH ) AND NOW() ORDER BY DATE ASC;  
+          "; 
+          $res = mysqli_query($mysqli,$sql);
+          if ($res) {
+            while ($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+              $userID = $newArray["userID"];
+              $productID = $newArray["productID"];
+              $productName = $newArray["productName"];
+              $grade = $newArray["grade"];
+              $date = $newArray["date"];
+              $comment = $newArray["comment"];
+              
+              echo '<div id="reviewdata2" class="div-block-4">
+              <h4 class="reviewinfo">'.$userID.'</h4>
+              <h4 class="reviewinfo">'.$date.'</h4>
+              <h4 class="reviewinfo">'.$productID.'</h4>
+              <h4 class="reviewinfo">'.$productName.'</h4>
+              <h4 class="reviewinfo">'.str_repeat("★", $grade).'</h4>
+              <p class="paragraph">'.$comment.'</p>
+              </div><br><br>';
+
+            }
+          }
+                
+        } else {
+            echo "disconnect ";
+            exit();
+        }
+        ?>
       </div>
     </div>
   </div>
