@@ -34,13 +34,26 @@
     <div class="w-layout-blockcontainer container-10 w-container"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image-6"></div>
     <div class="w-layout-blockcontainer container-9 w-container">
       <div class="w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" method="get" class="form-4" data-wf-page-id="6545eca4ff3677790e075d31" data-wf-element-id="9d906531-68b5-4b68-1f6e-95d15fd3c362"><label for="ID" class="field-label-5">ID</label><input type="text" class="text-field-6 w-input" maxlength="256" name="ID" data-name="ID" placeholder="Enter your ID" id="ID" required=""><label for="Password" class="field-label-2">PASSWORD</label><input type="password" class="text-field w-input" maxlength="256" name="Password" data-name="Password" placeholder="Enter your password" id="Password" required=""><input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button"></form>
+        <form action="login.php" id="email-form" name="login-form" data-name="login Form" method="POST" class="form-4" data-wf-page-id="6545eca4ff3677790e075d31" data-wf-element-id="9d906531-68b5-4b68-1f6e-95d15fd3c362">
+          <label for="ID" class="field-label-5">ID</label>
+          <input type="text" class="text-field-6 w-input" maxlength="256" name="ID" data-name="ID" placeholder="Enter your ID" id="ID" required="">
+          <label for="Password" class="field-label-2">PASSWORD</label>
+          <input type="password" class="text-field w-input" maxlength="256" name="Password" data-name="Password" placeholder="Enter your password" id="Password" required="">
+          <input type="submit" value="Submit" data-wait="Please wait..." class="submit-button w-button">
+          
+
+        </form>
+        
+
+        
+        <!--
         <div class="w-form-done">
           <div>Thank you! Your submission has been received!</div>
         </div>
         <div class="w-form-fail">
           <div>Oops! Something went wrong while submitting the form.</div>
         </div>
+      -->
       </div>
     </div>
   </div>
