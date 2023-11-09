@@ -1,3 +1,6 @@
+drop view reviewRating;
+drop view orderCount;
+drop view wishCount;
 drop view deliveryView;
 drop table wishes;
 drop table coupons;

@@ -129,3 +129,21 @@ CREATE VIEW deliveryView AS
         comment, 
         status
    FROM orders join brands using (brandID) join products using(productID) join users using (userID) natural join deliveries  ;
+
+CREATE VIEW wishCount AS
+    SELECT
+        productID,
+        count(productID) as count
+    FROM wishes GROUP BY productID;
+
+CREATE VIEW orderCount AS
+    SELECT 
+        productID,
+        count(productID) as count
+    FROM orders GROUP BY productID;
+
+CREATE VIEW reviewRating AS
+    SELECT
+        productID,
+        format(avg(grade),2) as rating
+    FROM reviews GROUP BY productID;
