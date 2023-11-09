@@ -10,8 +10,8 @@ mysqli_begin_transaction($mysqli);
 
 if(isset($_POST["couponID"])) {
     $couponID = $_POST["couponID"];
-    $sql = "DELETE FROM coupons WHERE couponID = $couponID";
-    $result = mysqli_query($mysqli, $sql);
+    $query = "DELETE FROM coupons WHERE couponID = $couponID";
+    $result = mysqli_query($mysqli, $query);
 }
 
 if($result) {

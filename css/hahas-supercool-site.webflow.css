@@ -1678,3 +1678,8 @@ body {
   max-height: 290px;
   overflow-y: auto;
 }
+
+.brandlists {
+  max-height: 290px;
+  overflow-y: auto;
+}
