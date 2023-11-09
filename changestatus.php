@@ -1,6 +1,6 @@
 <?php
 
-$url = "user.php";
+$url = "user.php"; 
 header("Location: $url");
 $mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
 

@@ -2,7 +2,7 @@
 session_start();
 $mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
 
-if (mysqli_connect_errno()) {
+if (mysqli_connect_errno()) { 
     printf("Connect failed");
 } else {
     if (isset($_POST["ID"]) && isset($_POST["Password"])) {

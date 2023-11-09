@@ -1,6 +1,6 @@
 <!DOCTYPE html><!--  Last Published: Mon Nov 06 2023 05:41:27 GMT+0000 (Coordinated Universal Time)  -->
 <html data-wf-page="6545eca4ff3677790e075d2a" data-wf-site="6541d9f4fbd73e9498319e4c">
-<head>
+<head> 
   <meta charset="utf-8">
   <title>Think Big_Managing Online Shopping Mall Data</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
