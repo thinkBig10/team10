@@ -110,14 +110,58 @@ Time) -->
                             data-wf-page-id="6545eca4ff3677790e075d2d"
                             data-wf-element-id="ffd78a53-33d2-75bc-99da-a427247df95e"
                             action="brandType.php">
-                            
                             <select id="field" name="Type" data-name="Field" class="select-field w-select" onchange="this.form.submit()">
-                                <option value="footwear">FOOTWEAR</option>
+                            <?php
+                            $Type = $_POST['Type'];
+                            if($Type == 'footwear'){
+                                echo '<option value="footwear" selected="selected">FOOTWEAR</option>
                                 <option value="headwear">HEADWEAR</option>
                                 <option value="sportswear">SPORTSWEAR</option>
                                 <option value="everydaywear">EVERYDAYWEAR</option>
                                 <option value="underwear">UNDERWEAR</option>
-                                <option value="revenueorder" selected="selected">REVENUE ORDER</option>
+                                <option value="revenueorder">REVENUE ORDER</option>';
+                            }
+                            if($Type == 'headwear'){
+                                echo '<option value="footwear">FOOTWEAR</option>
+                                <option value="headwear" selected="selected">HEADWEAR</option>
+                                <option value="sportswear">SPORTSWEAR</option>
+                                <option value="everydaywear">EVERYDAYWEAR</option>
+                                <option value="underwear">UNDERWEAR</option>
+                                <option value="revenueorder">REVENUE ORDER</option>';
+                            }
+                            if($Type == 'sportswear'){
+                                echo '<option value="footwear">FOOTWEAR</option>
+                                <option value="headwear">HEADWEAR</option>
+                                <option value="sportswear" selected="selected">SPORTSWEAR</option>
+                                <option value="everydaywear">EVERYDAYWEAR</option>
+                                <option value="underwear">UNDERWEAR</option>
+                                <option value="revenueorder">REVENUE ORDER</option>';
+                            }
+                            if($Type == 'everydaywear'){
+                                echo '<option value="footwear">FOOTWEAR</option>
+                                <option value="headwear">HEADWEAR</option>
+                                <option value="sportswear">SPORTSWEAR</option>
+                                <option value="everydaywear" selected="selected">EVERYDAYWEAR</option>
+                                <option value="underwear">UNDERWEAR</option>
+                                <option value="revenueorder">REVENUE ORDER</option>';
+                            }
+                            if($Type == 'underwear'){
+                                echo '<option value="footwear">FOOTWEAR</option>
+                                <option value="headwear">HEADWEAR</option>
+                                <option value="sportswear">SPORTSWEAR</option>
+                                <option value="everydaywear">EVERYDAYWEAR</option>
+                                <option value="underwear" selected="selected">UNDERWEAR</option>
+                                <option value="revenueorder">REVENUE ORDER</option>';
+                            }
+                            if($Type == 'revenueorder'){
+                                echo '<option value="footwear">FOOTWEAR</option>
+                                <option value="headwear">HEADWEAR</option>
+                                <option value="sportswear">SPORTSWEAR</option>
+                                <option value="everydaywear">EVERYDAYWEAR</option>
+                                <option value="underwear">UNDERWEAR</option>
+                                <option value="revenueorder" selected="selected">REVENUE ORDER</option>';
+                            }                                
+                            ?>
                             </select>
                         </form>
                         <div class="w-form-done">
@@ -146,32 +190,32 @@ Time) -->
                         </div>
                         <div class="brandlists">';
 
-                        $selectedOption = 'revenueorder';
+                        $Type = $_POST['Type'];
                         $queryRollup = "SELECT CASE WHEN brandType IS NULL THEN 'TOTAL' ELSE brandType END AS brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands JOIN orders ON brands.brandID = orders.brandID GROUP BY brandType, brandName WITH ROLLUP;";
                         $resultRollup = mysqli_query($mysqli, $queryRollup);
 
                         while ($rowRollup = mysqli_fetch_assoc($resultRollup)) {
-                            if ($selectedOption == 'revenueorder' && $rowRollup["brandType"] == 'TOTAL') {
+                            if ($Type == 'revenueorder' && $rowRollup["brandType"] == 'TOTAL') {
                                 $totalT = "TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID GROUP BY brandName ORDER BY rank;";
-                            }else if($selectedOption == 'footwear' && $rowRollup["brandType"] == 'footwear'&&$rowRollup["brandName"] == NULL){
+                            }else if($Type == 'footwear' && $rowRollup["brandType"] == 'footwear'&&$rowRollup["brandName"] == NULL){
                                 $totalT = "FOOTWEAR TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID AND brandType = 'footwear' GROUP BY brandName ORDER BY rank;";
-                            }else if($selectedOption == 'headwear' && $rowRollup["brandType"] == 'headwear'&&$rowRollup["brandName"] == NULL){
+                            }else if($Type == 'headwear' && $rowRollup["brandType"] == 'headwear'&&$rowRollup["brandName"] == NULL){
                                 $totalT = "HEADWEAR TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID AND brandType = 'headwear' GROUP BY brandName ORDER BY rank;";
-                            }else if($selectedOption == 'sportswear' && $rowRollup["brandType"] == 'sportswear'&&$rowRollup["brandName"] == NULL){
+                            }else if($Type == 'sportswear' && $rowRollup["brandType"] == 'sportswear'&&$rowRollup["brandName"] == NULL){
                                 $totalT = "SPORTSWEAR TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID AND brandType = 'sportswear' GROUP BY brandName ORDER BY rank;";
-                            }else if($selectedOption == 'everydaywear' && $rowRollup["brandType"] == 'everydaywear'&&$rowRollup["brandName"] == NULL){
+                            }else if($Type == 'everydaywear' && $rowRollup["brandType"] == 'everydaywear'&&$rowRollup["brandName"] == NULL){
                                 $totalT = "EVERYDAYWEAR TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID AND brandType = 'everydaywear' GROUP BY brandName ORDER BY rank;";
-                            }else if($selectedOption == 'underwear' && $rowRollup["brandType"] == 'underwear'&&$rowRollup["brandName"] == NULL){
+                            }else if($Type == 'underwear' && $rowRollup["brandType"] == 'underwear'&&$rowRollup["brandName"] == NULL){
                                 $totalT = "UNDERWEAR TOTAL";
                                 $revenueT = $rowRollup["revenue"];
                                 $query = "SELECT RANK() OVER (ORDER BY revenue DESC) AS rank, brandType, brandName, brandIntro, SUM(purchasePrice) AS revenue FROM brands, orders WHERE brands.brandID = orders.brandID AND brandType = 'underwear' GROUP BY brandName ORDER BY rank;";
