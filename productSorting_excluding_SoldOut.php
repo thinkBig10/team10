@@ -152,12 +152,7 @@
                 </div>
                 <div class="productlists">
                     <?php
-                    $mysqli = mysqli_connect("localhost:3307", "team10", "team10", "team10");
-
-                    if (mysqli_connect_errno()) {
-                        echo "" . mysqli_connect_error();
-                        exit();
-                    } else {
+                    include "./dbConnection.php";
                         if ($sortBy == "wishes") {
                             $sql = "select RANK() over (ORDER BY  count desc) as 'rank',  productName,brandName,target,count as fivParam from wishCount natural join products natural join brands where stock!=0";
                         }
@@ -196,7 +191,6 @@
                         }
                         mysqli_free_result($res);
                         mysqli_close($mysqli);
-                    }
                     ?>
                 </div>
             </div>
