@@ -37,9 +37,9 @@
       <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
+      <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
       <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.html" aria-current="page" class="nav-btn w-nav-link w--current">Q&amp;A</a>
+      <a href="qna.php" aria-current="page" class="nav-btn w-nav-link w--current">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
@@ -61,31 +61,71 @@
     </div>
     <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e3b-0e075d33" class="w-layout-cell content">
       <div class="div-block-9 qnanav">
-        <a id="qna_restock" href="#" class="button w-button">RESTOCK</a>
-        <a id="qna_service" href="#" class="button w-button">SERVICE</a>
-        <a id="qna_delivery" href="#" class="button clicked w-button">DELIVERY</a>
-        <a id="qna_refund" href="#" class="button w-button">REFUND</a>
-      </div>
-      <div id="qnadata1" class="div-block-10">
-        <div id="qnadata1_date" class="text-block">2022.11.03.</div>
-        <div id="qnadata1_questionblock" class="div-block-11"><img src="images/qmark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/qmark-p-500.png 500w, images/qmark.png 512w" class="image-4">
-          <p id="qnadata1_comment" class="paragraph-2">The hat I ordered last Friday hasn&#x27;t been delivered yet.</p>
-        </div>
-        <div id="qnadata1_responseblock" class="div-block-12"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
-          <p id="qnadata1_replycomment" class="paragraph-3">I&#x27;m so sorry. This product is currently... (Read more)</p>
-        </div>
-      </div>
-      <div class="div-block-10">
-        <div class="text-block">2022.11.03.</div>
-        <div class="div-block-11"><img src="images/qmark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/qmark-p-500.png 500w, images/qmark.png 512w" class="image-4">
-          <p class="paragraph-2">When will the black socks be delivered?</p>
-        </div>
-        <div class="div-block-12">
-          <div class="div-block-13"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
-            <p class="paragraph-3">(none)</p>
-          </div>
-        </div>
-      </div>
+        <a id="qna_restock" href="qna_general.php" class="button w-button">GENERAL</a>
+        <a id="qna_service" href="qna_product.php" class="button w-button">PRODUCT</a>
+        <a id="qna_delivery" href="qna_shipping.php" class="button clicked w-button">SHIPPING</a>
+        <a id="qna_refund" href="qna.php" class="button w-button">TOTAL</a>
+      </div> 
+
+        <?php
+        include "./dbConnection.php";
+        if($mysqli){
+          $sql = "
+          select * from qna where type='Shipping';  
+          "; 
+          $res = mysqli_query($mysqli,$sql);
+          if ($res) {
+            while ($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
+              $qnaID = $newArray["qnaID"];
+              $userID = $newArray["userID"];
+              $type = $newArray["type"];
+              $date = $newArray["date"];
+              $comment = $newArray["comment"];
+
+              echo '<div id="qnadata1" class="div-block-10">
+              <div class="text-block">'.$date.'</div>
+              <div class="div-block-11"><img src="images/qmark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/qmark-p-500.png 500w, images/qmark.png 512w" class="image-4">
+                <p class="paragraph-2">'.$comment.'</p>
+              </div>';
+
+              $sqlReply = "select * from replyqna where qnaID = $qnaID";
+              $resReply = mysqli_query($mysqli, $sqlReply);
+              $totalRows = mysqli_num_rows($resReply);
+  
+                if ($totalRows>0) {
+                    while ($replyArray = mysqli_fetch_array($resReply, MYSQLI_ASSOC)) {
+                        $replyID = $replyArray["qnaID"];
+                        $reComment = $replyArray["comment"];
+                          echo '
+                          <div id="qnadata1_responseblock" class="div-block-12"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
+                            <p id="qnadata1_replycomment" class="paragraph-3">'.$reComment.'</p>
+                          </div>
+                        </div>
+                        <br>';              
+                    }
+                }
+                else{
+                    // 변수 설정. qnaID를 reply 페이지로 보내서 원하는 qnaID의 qna에 reply 달릴 수 있도록
+                    $variableToSend = $qnaID;
+                    $targetFile = "replyqna.php";
+                    $parameterName = "data"; // 전달할 변수 이름 data
+                    $link = "$targetFile?$parameterName=" . urlencode($variableToSend);
+
+                  echo '
+                  <div id="qnadata1_responseblock" class="div-block-12"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
+                    <p id="qnadata1_replycomment" class="paragraph-3"><button type="button"><a href='.$link.' class="reply">reply</a></button></p>
+                  </div>
+                </div>
+                <br>';  
+                }
+            }
+          }
+                
+        } else {
+            echo "disconnect ";
+            exit();
+        }
+        ?>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6541d9f4fbd73e9498319e4c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

@@ -30,14 +30,14 @@
 <body class="body">
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar-wrapper w-container">
-      <a href="notice.html" class="nav-btn w-nav-link">NOTICE</a>
-      <a href="user.html" class="nav-btn w-nav-link">USER</a>
+      <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+      <a href="user.php" class="nav-btn w-nav-link">USER</a>
       <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
-      <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
-      <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
+      <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
+      <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
       <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
       <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
+      <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
@@ -46,15 +46,22 @@
   <div id="w-node-f02deb08-1748-36ee-2932-984c42297013-0e075d2a" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-f2afb077-a016-5d75-30ba-dcdbdaafbe58-0e075d2a" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_607a5ac0-ae65-45d9-dc8c-65b4d7adb672-0e075d2a" class="w-layout-layout info wf-layout-layout">
-        <div id="w-node-_8b563a7a-f7ab-0bb2-e1d0-7e72b244be19-0e075d2a" class="w-layout-cell id">
-          <div class="user-info">Salary123</div>
-        </div>
-        <div id="w-node-c1f49ac5-bf4e-346f-12a9-9c33d711b5db-0e075d2a" class="w-layout-cell name">
-          <div class="user-info">matilda</div>
-        </div>
-        <div id="w-node-_1293a98e-9dcd-379c-0f63-5602634318ea-0e075d2a" class="w-layout-cell department">
-          <div class="user-info">management</div>
-        </div>
+      <?php
+          session_start();
+        echo "<div id='w-node-_8b563a7a-f7ab-0bb2-e1d0-7e72b244be19-0e075d2a' class='w-layout-cell id'>";
+        echo "<div class='user-info'>" .$_SESSION['employeeID']. "</div>";
+        echo "</div>";
+       echo "<div id='w-node-c1f49ac5-bf4e-346f-12a9-9c33d711b5db-0e075d2a' class='w-layout-cell name'>";
+       echo "<div class='user-info'>" .$_SESSION['name']. "</div>";
+        echo "</div>";
+          
+          
+          echo "<div id='w-node-_1293a98e-9dcd-379c-0f63-5602634318ea-0e075d2a' class='w-layout-cell department'>";
+          echo "<div class='user-info'>".$_SESSION['department']. "</div>";
+          echo "</div>";
+      ?>
+      
+        
       </div>
     </div>
     <div id="w-node-_47fdaf22-571f-8a8a-c367-de86c311fc89-0e075d2a" class="w-layout-cell content"></div>
