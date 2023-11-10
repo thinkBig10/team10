@@ -51,18 +51,18 @@ Time) -->
             role="banner"
             class="navbar w-nav">
             <div class="navbar-wrapper w-container">
-                <a href="notice.html" class="nav-btn w-nav-link">NOTICE</a>
-                <a href="user.html" class="nav-btn w-nav-link">USER</a>
-                <a href="brand.html" aria-current="page" class="nav-btn w-nav-link w--current">BRAND</a>
-                <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
-                <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
-                <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
-                <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-                <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
+                <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+                <a href="user.php" class="nav-btn w-nav-link">USER</a>
+                <a href="brand.php" aria-current="page" class="nav-btn w-nav-link w--current">BRAND</a>
+                <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
+                <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
+                <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
+                <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
+                <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
             </div>
         </div>
         <section class="titlebar">
-            <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+            <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
         </section>
         <div
             id="w-node-_7b9a4372-5bcf-8df5-bf10-49e65251742a-0e075d2d"
