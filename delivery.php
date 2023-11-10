@@ -73,12 +73,8 @@
       </div>
 
       <?php
-      $mysqli = mysqli_connect("localhost:3307", "team10", "team10", "team10");
-
-      if (mysqli_connect_errno()) {
-        echo "" . mysqli_connect_error();
-        exit();
-      } else {
+      
+      include "./dbConnection.php";
         $sql = "select * from deliveryView";
         $res = mysqli_query($mysqli, $sql);
         if ($res) {
@@ -162,7 +158,7 @@
         }
         mysqli_free_result($res);
         mysqli_close($mysqli);
-      }
+      
       ?>
     </div>
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6541d9f4fbd73e9498319e4c"
