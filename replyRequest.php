@@ -1,7 +1,7 @@
 <?php
 $url = "qna.php";
 header("Location: $url");
-$mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
+include "./dbConnection.php";
 if ($mysqli) {
     // 보영이 코드 받고 세션 활성화 시키기
     session_start();

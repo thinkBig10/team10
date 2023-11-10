@@ -67,7 +67,7 @@
       <div class="div-block-2">
         <br>
         <?php
-        $mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
+        include "./dbConnection.php";
         if($mysqli){
           $sql = "
           select * from reviews R join products P on R.productID = P.productID WHERE date BETWEEN DATE_ADD(NOW(), INTERVAL -1 MONTH ) AND NOW() ORDER BY DATE ASC;  

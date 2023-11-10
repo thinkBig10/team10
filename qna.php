@@ -68,7 +68,7 @@
       </div> 
 
         <?php
-        $mysqli = mysqli_connect("localhost:3306", "team10", "team10", "team10");
+        include "./dbConnection.php";
         if($mysqli){
           $sql = "
           select * from qna;  
