@@ -82,17 +82,17 @@ Time) -->
                     <div
                         id="w-node-_7b9a4372-5bcf-8df5-bf10-49e65251742e-0e075d2d"
                         class="w-layout-cell id">
-                        <div class="user-info">Salary123</div>
+                        <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
                     </div>
                     <div
                         id="w-node-_7b9a4372-5bcf-8df5-bf10-49e652517431-0e075d2d"
                         class="w-layout-cell name">
-                        <div class="user-info">matilda</div>
+                        <div class="user-info"><?php  echo $_SESSION['name'];?></div>
                     </div>
                     <div
                         id="w-node-_7b9a4372-5bcf-8df5-bf10-49e652517434-0e075d2d"
                         class="w-layout-cell department">
-                        <div class="user-info">management</div>
+                        <div class="user-info"><?php echo $_SESSION['department'];?></div>
                     </div>
                 </div>
             </div>
@@ -130,8 +130,8 @@ Time) -->
                 </div>
 
                 <?php
-                    $mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
-
+                    #$mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
+                    include "./dbConnection.php";
                     if (mysqli_connect_errno()) {
                         printf("Connect failed: %s\n", mysqli_connect_error());
                         exit();
