@@ -1,7 +1,7 @@
 <?php
 session_start();
-$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
-
+#$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
+include "./dbConnection.php";
 if (mysqli_connect_errno()) {
     printf("Connect failed");
 } else {
