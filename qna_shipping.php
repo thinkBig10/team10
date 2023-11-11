@@ -39,7 +39,7 @@
       <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
       <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
       <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.php" aria-current="page" class="nav-btn w-nav-link w--current" style="color: #3880eb">Q&amp;A</a>
+      <a href="qna.php" aria-current="page" class="nav-btn w-nav-link w--current">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
