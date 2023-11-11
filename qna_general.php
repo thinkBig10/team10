@@ -2,7 +2,7 @@
 <html data-wf-page="6545eca4ff3677790e075d33" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>Qna</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="Qna" property="og:title">
   <meta content="Qna" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -32,30 +32,30 @@
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar-wrapper w-container">
-      <a href="notice.html" class="nav-btn w-nav-link">NOTICE</a>
-      <a href="user.html" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
-      <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
-      <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
+      <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+      <a href="user.php" class="nav-btn w-nav-link">USER</a>
+      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
+      <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
       <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
+      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
       <a href="qna.php" aria-current="page" class="nav-btn w-nav-link w--current">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2e-0e075d33" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2f-0e075d33" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e31-0e075d33" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e32-0e075d33" class="w-layout-cell id">
-          <div class="user-info">Salary123</div>
+          <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
         </div>
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e35-0e075d33" class="w-layout-cell name">
-          <div class="user-info">matilda</div>
+          <div class="user-info"><?php  echo $_SESSION['name'];?></div>
         </div>
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e38-0e075d33" class="w-layout-cell department">
-          <div class="user-info">management</div>
+          <div class="user-info"><?php echo $_SESSION['department'];?></div>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
         <a id="qna_delivery" href="qna_shipping.php" class="button w-button">SHIPPING</a>
         <a id="qna_refund" href="qna.php" class="button w-button">TOTAL</a>
       </div> 
-
+      <div class="Scroll" style="width: 100%; max-height: 410px; overflow-y: auto;">
         <?php
         include "./dbConnection.php";
         if($mysqli){
@@ -126,6 +126,7 @@
             exit();
         }
         ?>
+        </div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6541d9f4fbd73e9498319e4c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

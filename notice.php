@@ -2,7 +2,7 @@
 <html data-wf-page="65460ab43711faad5ad519dc" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>NewNotice</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="NewNotice" property="og:title">
   <meta content="NewNotice" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -31,7 +31,7 @@
 
 <style>
     .scrollable-div {
-  max-height: 500px; 
+  max-height: 480px; 
   overflow-y: auto;
 }
 .noticenav {
@@ -54,16 +54,16 @@
     <div class="navbar-wrapper w-container">
       <a href="notice.php" aria-current="page" class="nav-btn w-nav-link w--current">NOTICE</a>
       <a href="user.php" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
-      <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
-      <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
+      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
+      <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
+      <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
+      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
+      <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac765-5ad519dc" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac766-5ad519dc" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
@@ -86,8 +86,9 @@
           
 
         <?php
-$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
+#$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
 #$mysqli = mysqli_connect("localhost:43306", "root", "123456789", "thinkbig");
+include "./dbConnection.php";
 
 if (mysqli_connect_errno()) {
   printf("Connect failed");

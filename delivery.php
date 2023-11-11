@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ThinkBig : Shipping Management</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="Delivery" property="og:title">
   <meta content="Delivery" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -29,24 +29,40 @@
   </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
+
+  <style>
+  .scrollable-div {
+  max-height: 500px; 
+  overflow-y: auto;
+}
+.div-block-19.deliverynav {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 1000; 
+  width: 100%; 
+  padding: 10px; /
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+</style>
 </head>
 
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
     role="banner" class="navbar w-nav">
     <div class="navbar-wrapper w-container">
-      <a href="newnotice.html" class="nav-btn w-nav-link">NOTICE</a>
-      <a href="user.html" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
+      <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+      <a href="user.php" class="nav-btn w-nav-link">USER</a>
+      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.php" aria-current="page" class="nav-btn w-nav-link w--current">DELIVERY</a>
-      <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupontemp2.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
+      <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
+      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
+      <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
+    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
         class="image"></a>
   </section>
   <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab2-0e075d2f" class="w-layout-layout block wf-layout-layout">
@@ -54,18 +70,18 @@
         src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab5-0e075d2f" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab6-0e075d2f" class="w-layout-cell id">
-          <div class="user-info">Salary123</div>
+          <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
         </div>
         <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab9-0e075d2f" class="w-layout-cell name">
-          <div class="user-info">matilda</div>
+          <div class="user-info"><?php  echo $_SESSION['name'];?></div>
         </div>
         <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324abc-0e075d2f" class="w-layout-cell department">
-          <div class="user-info">management</div>
+          <div class="user-info"><?php echo $_SESSION['department'];?></div>
         </div>
       </div>
     </div>
     <div id="deliverycell"
-      class="w-layout-cell content deliverycell w-node-_01990053-9cad-eed2-2fd0-c51042324abf-0e075d2f">
+      class="scrollable-div  w-layout-cell content deliverycell w-node-_01990053-9cad-eed2-2fd0-c51042324abf-0e075d2f">
       <div class="div-block-19 deliverynav">
         <h4 id="delivery_userinfo_col" class="heading-2">INFO</h4>
         <h4 id="delivery_status_col" class="heading-3">STATUS</h4>

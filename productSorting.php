@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Product</title>
+    <title>ThinkBig_Managing Online Shopping Mall Data</title>
     <meta content="Product" property="og:title">
     <meta content="Product" property="twitter:title">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -35,18 +35,18 @@
     <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease"
         role="banner" class="navbar w-nav">
         <div class="navbar-wrapper w-container">
-            <a href="notice.html" class="nav-btn w-nav-link">NOTICE</a>
-            <a href="user.html" class="nav-btn w-nav-link">USER</a>
-            <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
+            <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+            <a href="user.php" class="nav-btn w-nav-link">USER</a>
+            <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
             <a href="product.php" aria-current="page" class="nav-btn w-nav-link w--current">PRODUCT</a>
             <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
-            <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
-            <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-            <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
+            <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
+            <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
+            <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
         </div>
     </div>
     <section class="titlebar">
-        <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
+        <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
                 class="image"></a>
     </section>
     <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11bc-0e075d32" class="w-layout-layout block wf-layout-layout">
@@ -55,20 +55,20 @@
             <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11bf-0e075d32"
                 class="w-layout-layout info wf-layout-layout">
                 <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11c0-0e075d32" class="w-layout-cell id">
-                    <div class="user-info">Salary123</div>
+                    <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
                 </div>
                 <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11c3-0e075d32" class="w-layout-cell name">
-                    <div class="user-info">matilda</div>
+                    <div class="user-info"><?php  echo $_SESSION['name'];?></div>
                 </div>
                 <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11c6-0e075d32" class="w-layout-cell department">
-                    <div class="user-info">management</div>
+                    <div class="user-info"><?php echo $_SESSION['department'];?></div>
                 </div>
             </div>
         </div>
         <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11c9-0e075d32" class="w-layout-cell content productcell">
             <div class="div-block-5">
                 <div class="w-form" style="display:flex;">
-                    <form id="productform" action="productSorting.php" method="POST" style="width:1070px;">
+                    <form id="productform" action="productSorting.php" method="POST" style="flex: 1;">
                         <select onchange="this.form.submit()" id="productfiled" name="sortBy" data-name="Field"
                             class="select-field w-select">
                             <?php
@@ -117,7 +117,7 @@
                         ?>
                         <input onchange="this.form.submit()" type="checkbox" name="soldOut" value="Y"
                             style="margin-left:10px; margin-right:5px; "><label for="soldOut"
-                            style="padding-top:13px;">Excluding sold-out</label>
+                            style="padding-top:13px; margin-right:15px;">Excluding sold-out</label>
                     </form>
                     <div class="w-form-done">
                         <div>Thank you! Your submission has been received!</div>
@@ -149,7 +149,7 @@
                     ?>
 
                 </div>
-                <div class="productlists">
+                <div class="productlists" style="max-height: 360px; overflow-y: auto;">
                     <?php
                     include "./dbConnection.php";
                         if ($sortBy == "wishes") {
