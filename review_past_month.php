@@ -2,7 +2,7 @@
 <html data-wf-page="6545eca4ff3677790e075d35" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>Review</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="Review" property="og:title">
   <meta content="Review" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -37,13 +37,13 @@
       <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.php" aria-current="page" class="nav-btn w-nav-link w--current">REVIEW</a>
+      <a href="review.php" aria-current="page" class="nav-btn w-nav-link w--current" style="color: #3880eb">REVIEW</a>
       <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
       <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_60a055be-d1fc-b8f4-ffed-127c599633dc-0e075d35" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_60a055be-d1fc-b8f4-ffed-127c599633dd-0e075d35" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
@@ -65,7 +65,7 @@
         <a href="review.php" class="button w-button">Total</a>
       </div>
       <div class="div-block-2">
-        <br>
+      <div class="Scroll" style="max-height: 410px; overflow-y: auto;">
         <?php
         include "./dbConnection.php";
         if($mysqli){
@@ -99,6 +99,7 @@
             exit();
         }
         ?>
+        </div>
       </div>
     </div>
   </div>

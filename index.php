@@ -2,7 +2,7 @@
 <html data-wf-page="6545eca4ff3677790e075d2a" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>Think Big_Managing Online Shopping Mall Data</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <link href="css/normalize.css" rel="stylesheet" type="text/css">
   <link href="css/webflow.css" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" aria-current="page" class="link-block w-inline-block w--current"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.php" aria-current="page" class="link-block w-inline-block w--current"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-f02deb08-1748-36ee-2932-984c42297013-0e075d2a" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-f2afb077-a016-5d75-30ba-dcdbdaafbe58-0e075d2a" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
