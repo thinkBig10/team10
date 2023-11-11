@@ -28,38 +28,18 @@
     </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-
-<style>
-    .scrollable-div {
-  max-height: 500px; 
-  overflow-y: auto;
-}
-.noticenav {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 1000; 
-  width: 100%; 
-  padding: 10px; /
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
-  </style>
-
-
-
-
 </head>
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar-wrapper w-container">
-      <a href="notice.php" aria-current="page" class="nav-btn w-nav-link w--current">NOTICE</a>
-      <a href="user.php" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="notice.html" aria-current="page" class="nav-btn w-nav-link w--current">NOTICE</a>
+      <a href="user.html" class="nav-btn w-nav-link">USER</a>
+      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
+      <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
+      <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
+      <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
@@ -69,54 +49,25 @@
     <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac766-5ad519dc" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac768-5ad519dc" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac769-5ad519dc" class="w-layout-cell id">
-          <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
+          <div class="user-info">Salary123</div>
         </div>
         <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac76c-5ad519dc" class="w-layout-cell name">
-          <div class="user-info"><?php  echo $_SESSION['name'];?></div>
+          <div class="user-info">matilda</div>
         </div>
         <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac76f-5ad519dc" class="w-layout-cell department">
-          <div class="user-info"><?php echo $_SESSION['department'];?></div>
+          <div class="user-info">management</div>
         </div>
       </div>
     </div>
     <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac772-5ad519dc" class="w-layout-cell content noticecell">
-      <div id="noticeblock" class="noticeblock notificationblock scrollable-div">
-        <h3 class="heading noticenav ">NOTICE</h3>
+      <div id="noticeblock" class="noticeblock notificationblock">
+        <h3 class="heading">NOTICE</h3>
         <div class="div-block-2 noticesample">
-          
-
-        <?php
-#$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
-#$mysqli = mysqli_connect("localhost:43306", "root", "123456789", "thinkbig");
-include "./dbConnection.php";
-
-if (mysqli_connect_errno()) {
-  printf("Connect failed");
-} else {
-  $sql = "SELECT * FROM notifications";
-  $res = mysqli_query($mysqli, $sql);
-  if ($res) {
-    while ($newArray = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
-      $writerid = $newArray['writerID'];
-      $date = $newArray['date'];
-      $content = $newArray['content'];
-      echo "<div class='div-block-4'>";
-      echo " <h4 class='reviewinfo'>" . $writerid . "</h4>";
-      echo "<h4 class='reviewinfo' style='font-size:12px;'>" . $date . "</h4><br>";
-      echo "<p class='paragraph'>" . $content . "</p>";
-      echo "</div>";
-    }
-  } else {
-    printf("Error");
-  }
-  mysqli_free_result($res);
-  mysqli_close($mysqli);
-}
-?>
-
-
-
-            
+          <div class="div-block-4">
+            <h4 class="reviewinfo">Salary123</h4>
+            <h4 class="reviewinfo">2023.11.02.</h4>
+            <p class="paragraph">Dear Valued Shoppers,We are excited to announce special holiday discounts at [Think BIG] To make your holiday shopping even more enjoyable, we have some fantastic offers for you:1. **Black Friday Extravaganza:** Get ready for unbeatable deals this Black Friday!enjoy discounts of up to 50% off on selected items from your favorite brands.2. **Extended Shopping Hours:**</p>
+          </div>
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@
 <html data-wf-page="6545eca4ff3677790e075d34" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>ThinkBig_Managing Online Shopping Mall Data</title>
+  <title>ReplyQna</title>
   <meta content="ReplyQna" property="og:title">
   <meta content="ReplyQna" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -43,7 +43,7 @@
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_990be46c-46c2-6338-093e-ab5c1159749a-0e075d34" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_990be46c-46c2-6338-093e-ab5c1159749b-0e075d34" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">

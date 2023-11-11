@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ThinkBig_Managing Online Shopping Mall Data</title>
+  <title>ThinkBig : Shipping Management</title>
   <meta content="Delivery" property="og:title">
   <meta content="Delivery" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -29,22 +29,6 @@
   </script>
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link href="images/webclip.png" rel="apple-touch-icon">
-
-  <style>
-  .scrollable-div {
-  max-height: 500px; 
-  overflow-y: auto;
-}
-.div-block-19.deliverynav {
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 1000; 
-  width: 100%; 
-  padding: 10px; /
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-}
-</style>
 </head>
 
 <body>
@@ -53,7 +37,7 @@
     <div class="navbar-wrapper w-container">
       <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
       <a href="user.php" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="brand.pp-hp" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.php" aria-current="page" class="nav-btn w-nav-link w--current">DELIVERY</a>
       <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
@@ -62,7 +46,7 @@
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
+    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt=""
         class="image"></a>
   </section>
   <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab2-0e075d2f" class="w-layout-layout block wf-layout-layout">
@@ -81,7 +65,7 @@
       </div>
     </div>
     <div id="deliverycell"
-      class="scrollable-div  w-layout-cell content deliverycell w-node-_01990053-9cad-eed2-2fd0-c51042324abf-0e075d2f">
+      class="w-layout-cell content deliverycell w-node-_01990053-9cad-eed2-2fd0-c51042324abf-0e075d2f">
       <div class="div-block-19 deliverynav">
         <h4 id="delivery_userinfo_col" class="heading-2">INFO</h4>
         <h4 id="delivery_status_col" class="heading-3">STATUS</h4>
