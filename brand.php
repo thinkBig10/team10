@@ -6,7 +6,7 @@ Time) -->
     data-wf-site="6541d9f4fbd73e9498319e4c">
     <head>
         <meta charset="utf-8">
-        <title>ThinkBig_Managing Online Shopping Mall Data</title>
+        <title>Brand</title>
         <meta content="Brand" property="og:title">
         <meta content="Brand" property="twitter:title">
         <meta content="width=device-width, initial-scale=1" name="viewport">
