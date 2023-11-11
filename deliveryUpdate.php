@@ -2,8 +2,8 @@
 
 $url = "delivery.php";
 header("Location: $url");
-$mysqli = mysqli_connect("localhost:3307", "team10", "team10", "team10");
-
+#$mysqli = mysqli_connect("localhost:3307", "team10", "team10", "team10");
+include "./dbConnection.php";
 if (mysqli_connect_errno()) {
     echo "" . mysqli_connect_error();
     exit();
