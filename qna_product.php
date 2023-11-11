@@ -32,13 +32,13 @@
 <body>
   <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
     <div class="navbar-wrapper w-container">
-      <a href="notice.html" class="nav-btn w-nav-link">NOTICE</a>
-      <a href="user.html" class="nav-btn w-nav-link">USER</a>
-      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
-      <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
-      <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
+      <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
+      <a href="user.php" class="nav-btn w-nav-link">USER</a>
+      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
+      <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
       <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
+      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
       <a href="qna.php" aria-current="page" class="nav-btn w-nav-link w--current">Q&amp;A</a>
     </div>
   </div>
@@ -49,13 +49,13 @@
     <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2f-0e075d33" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e31-0e075d33" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e32-0e075d33" class="w-layout-cell id">
-          <div class="user-info">Salary123</div>
+          <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
         </div>
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e35-0e075d33" class="w-layout-cell name">
-          <div class="user-info">matilda</div>
+          <div class="user-info"><?php  echo $_SESSION['name'];?></div>
         </div>
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e38-0e075d33" class="w-layout-cell department">
-          <div class="user-info">management</div>
+          <div class="user-info"><?php echo $_SESSION['department'];?></div>
         </div>
       </div>
     </div>
