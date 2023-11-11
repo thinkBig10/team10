@@ -82,17 +82,17 @@ Time) -->
                     <div
                         id="w-node-b30baabe-ca56-adbb-2114-5c1742e912c4-12a33a88"
                         class="w-layout-cell id">
-                        <div class="user-info">Salary123</div>
+                        <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
                     </div>
                     <div
                         id="w-node-b30baabe-ca56-adbb-2114-5c1742e912c7-12a33a88"
                         class="w-layout-cell name">
-                        <div class="user-info">matilda</div>
+                        <div class="user-info"><?php  echo $_SESSION['name'];?></div>
                     </div>
                     <div
                         id="w-node-b30baabe-ca56-adbb-2114-5c1742e912ca-12a33a88"
                         class="w-layout-cell department">
-                        <div class="user-info">management</div>
+                        <div class="user-info"><?php echo $_SESSION['department'];?></div>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,8 @@ Time) -->
                             <!--내부 스크롤 .couponShowBlock { max-height: 290px; overflow-y: auto; }-->
                             <div class='couponShowBlock'>
                             <?php
-                                $mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
+                                #$mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
+                                include "./dbConnection.php";
 
                                 if (mysqli_connect_errno()) {
                                   printf("Connect failed: %s\n", mysqli_connect_error());
