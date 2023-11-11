@@ -2,7 +2,7 @@
 <html data-wf-page="65460ab43711faad5ad519dc" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>NewNotice</title>
+  <title>ThinkBig_Managing Online Shopping Mall Data</title>
   <meta content="NewNotice" property="og:title">
   <meta content="NewNotice" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -31,7 +31,7 @@
 
 <style>
     .scrollable-div {
-  max-height: 500px; 
+  max-height: 480px; 
   overflow-y: auto;
 }
 .noticenav {
@@ -63,7 +63,7 @@
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac765-5ad519dc" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_8767a444-998f-5cec-9e36-f222108ac766-5ad519dc" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
