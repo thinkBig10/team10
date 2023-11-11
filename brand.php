@@ -6,7 +6,7 @@ Time) -->
     data-wf-site="6541d9f4fbd73e9498319e4c">
     <head>
         <meta charset="utf-8">
-        <title>ThinkBig_Managing Online Shopping Mall Data</title>
+        <title>Brand</title>
         <meta content="Brand" property="og:title">
         <meta content="Brand" property="twitter:title">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -110,13 +110,8 @@ Time) -->
                             data-wf-page-id="6545eca4ff3677790e075d2d"
                             data-wf-element-id="ffd78a53-33d2-75bc-99da-a427247df95e"
                             action="brandType.php">
-
-                            <select
-                                id="field"
-                                name="Type"
-                                data-name="Field"
-                                class="select-field w-select"
-                                onchange="this.form.submit()">
+                            
+                            <select id="field" name="Type" data-name="Field" class="select-field w-select" onchange="this.form.submit()">
                                 <option value="footwear">FOOTWEAR</option>
                                 <option value="headwear">HEADWEAR</option>
                                 <option value="sportswear">SPORTSWEAR</option>
@@ -134,7 +129,7 @@ Time) -->
                     </div>
                 </div>
 
-            <?php
+                <?php
                     #$mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
                     include "./dbConnection.php";
                     if (mysqli_connect_errno()) {
@@ -196,10 +191,10 @@ Time) -->
                         echo'</div>
                         </div>
                         <div class="div-block-8 brand_rollup_block">
-                            <div class="div-block-7 datarow" style="font-weight: bold">' . $totalT . '</div>
+                            <div class="div-block-7 datarow">' . $totalT . '</div>
                             <div class="div-block-7 productnamecol datarow"></div>
                             <div class="div-block-7 brandnamecol datarow"></div>
-                            <div class="div-block-7 datarow" style="font-weight: bold">' . $revenueT . '</div>
+                            <div class="div-block-7 datarow">' . $revenueT . '</div>
                         </div>';
 
                         mysqli_close($mysqli);
@@ -214,5 +209,6 @@ Time) -->
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
         <script src="js/webflow.js" type="text/javascript"></script>
-        <script></body>
-    </html>
+        <script>
+    </body>
+</html>

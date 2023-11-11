@@ -2,7 +2,7 @@
 <html data-wf-page="6545eca4ff3677790e075d33" data-wf-site="6541d9f4fbd73e9498319e4c">
 <head>
   <meta charset="utf-8">
-  <title>ThinkBig_Managing Online Shopping Mall Data</title>
+  <title>Qna</title>
   <meta content="Qna" property="og:title">
   <meta content="Qna" property="twitter:title">
   <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -43,7 +43,7 @@
     </div>
   </div>
   <section class="titlebar">
-    <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
+    <a href="index.html" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2e-0e075d33" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2f-0e075d33" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
@@ -66,7 +66,7 @@
         <a id="qna_delivery" href="qna_shipping.php" class="button w-button">SHIPPING</a>
         <a id="qna_refund" href="qna.php" class="button clicked w-button">TOTAL</a>
       </div> 
-      <div class="Scroll" style="width: 100%; max-height: 410px; overflow-y: auto;">
+
         <?php
         include "./dbConnection.php";
         if($mysqli){
@@ -126,7 +126,6 @@
             exit();
         }
         ?>
-        </div>
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6541d9f4fbd73e9498319e4c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
