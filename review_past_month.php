@@ -37,7 +37,7 @@
       <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
       <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
       <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.php" aria-current="page" class="nav-btn w-nav-link w--current">REVIEW</a>
+      <a href="review.php" aria-current="page" class="nav-btn w-nav-link w--current" style="color: #3880eb">REVIEW</a>
       <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
       <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>

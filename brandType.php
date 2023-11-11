@@ -53,7 +53,7 @@ Time) -->
             <div class="navbar-wrapper w-container">
                 <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
                 <a href="user.php" class="nav-btn w-nav-link">USER</a>
-                <a href="brand.php" aria-current="page" class="nav-btn w-nav-link w--current">BRAND</a>
+                <a href="brand.php" aria-current="page" class="nav-btn w-nav-link w--current" style="color: #3880eb">BRAND</a>
                 <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
                 <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
                 <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
