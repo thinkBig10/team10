@@ -56,12 +56,12 @@
     <div class="navbar-wrapper w-container">
       <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
       <a href="user.php" aria-current="page" class="nav-btn w-nav-link w--current">USER</a>
-      <a href="brand.html" class="nav-btn w-nav-link">BRAND</a>
-      <a href="product.html" class="nav-btn w-nav-link">PRODUCT</a>
-      <a href="delivery.html" class="nav-btn w-nav-link">DELIVERY</a>
-      <a href="review.html" class="nav-btn w-nav-link">REVIEW</a>
-      <a href="coupon.html" class="nav-btn w-nav-link">COUPON</a>
-      <a href="qna.html" class="nav-btn w-nav-link">Q&amp;A</a>
+      <a href="brand.php" class="nav-btn w-nav-link">BRAND</a>
+      <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
+      <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
+      <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
+      <a href="coupon.php" class="nav-btn w-nav-link">COUPON</a>
+      <a href="qna.php" class="nav-btn w-nav-link">Q&amp;A</a>
     </div>
   </div>
   <section class="titlebar">
@@ -93,8 +93,8 @@
  
 
       <?php
-$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
-
+#$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
+include "./dbConnection.php";
 if (mysqli_connect_errno()) {
   printf("Connect failed");
 } else {
