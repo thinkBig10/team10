@@ -53,7 +53,11 @@ Time) -->
             <div class="navbar-wrapper w-container">
                 <a href="notice.php" class="nav-btn w-nav-link">NOTICE</a>
                 <a href="user.php" class="nav-btn w-nav-link">USER</a>
-                <a href="brand.php" aria-current="page" class="nav-btn w-nav-link w--current">BRAND</a>
+                <a
+                    href="brand.php"
+                    aria-current="page"
+                    class="nav-btn w-nav-link w--current"
+                    style="color: #3880eb">BRAND</a>
                 <a href="product.php" class="nav-btn w-nav-link">PRODUCT</a>
                 <a href="delivery.php" class="nav-btn w-nav-link">DELIVERY</a>
                 <a href="review.php" class="nav-btn w-nav-link">REVIEW</a>
@@ -110,8 +114,13 @@ Time) -->
                             data-wf-page-id="6545eca4ff3677790e075d2d"
                             data-wf-element-id="ffd78a53-33d2-75bc-99da-a427247df95e"
                             action="brandType.php">
-                            <select id="field" name="Type" data-name="Field" class="select-field w-select" onchange="this.form.submit()">
-                            <?php
+                            <select
+                                id="field"
+                                name="Type"
+                                data-name="Field"
+                                class="select-field w-select"
+                                onchange="this.form.submit()">
+                                <?php
                             $Type = $_POST['Type'];
                             if($Type == 'footwear'){
                                 echo '<option value="footwear" selected="selected">FOOTWEAR</option>
@@ -173,7 +182,7 @@ Time) -->
                     </div>
                 </div>
 
-                <?php
+            <?php
                     #$mysqli = mysqli_connect("localhost", "team10", "team10", "team10");
                     include "./dbConnection.php";
                     if (mysqli_connect_errno()) {
@@ -235,10 +244,10 @@ Time) -->
                         echo'</div>
                         </div>
                         <div class="div-block-8 brand_rollup_block">
-                            <div class="div-block-7 datarow">' . $totalT . '</div>
+                            <div class="div-block-7 datarow" style="font-weight: bold">' . $totalT . '</div>
                             <div class="div-block-7 productnamecol datarow"></div>
                             <div class="div-block-7 brandnamecol datarow"></div>
-                            <div class="div-block-7 datarow">' . $revenueT . '</div>
+                            <div class="div-block-7 datarow" style="font-weight: bold">' . $revenueT . '</div>
                         </div>';
 
                         mysqli_close($mysqli);
@@ -253,6 +262,5 @@ Time) -->
             integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
             crossorigin="anonymous"></script>
         <script src="js/webflow.js" type="text/javascript"></script>
-        <script>
-    </body>
-</html>
+        <script></body>
+    </html>
