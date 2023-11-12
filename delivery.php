@@ -67,7 +67,7 @@
   </section>
   <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab2-0e075d2f" class="w-layout-layout block wf-layout-layout">
     <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab3-0e075d2f" class="w-layout-cell userinfo"><img
-        src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
+        src="images/userImg.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab5-0e075d2f" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_01990053-9cad-eed2-2fd0-c51042324ab6-0e075d2f" class="w-layout-cell id">
           <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>

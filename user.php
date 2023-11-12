@@ -67,7 +67,7 @@
     <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-e5917f05-57d1-a875-ab5a-ebb13a88fd37-9b187e56" class="w-layout-layout block wf-layout-layout">
-    <div id="w-node-e5917f05-57d1-a875-ab5a-ebb13a88fd38-9b187e56" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
+    <div id="w-node-e5917f05-57d1-a875-ab5a-ebb13a88fd38-9b187e56" class="w-layout-cell userinfo"><img src="images/userImg.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-e5917f05-57d1-a875-ab5a-ebb13a88fd3a-9b187e56" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-e5917f05-57d1-a875-ab5a-ebb13a88fd3b-9b187e56" class="w-layout-cell id">
           <?php 
