@@ -11,7 +11,7 @@ if ($mysqli) {
     $id = $_POST["idField"];
     $reComment = $_POST["field"];
     $reComment = mysqli_real_escape_string($mysqli, $reComment);
-    $sql = "INSERT INTO replyqna (qnaID, employeeID, date, comment) VALUES ('$id', 'XYZ8901234', '$todayDate', '$reComment')";
+    $sql = "INSERT INTO replyqna (qnaID, employeeID, date, comment) VALUES ('$id', '$employeeID', '$todayDate', '$reComment')";
 
     $res = mysqli_query($mysqli, $sql);
 
