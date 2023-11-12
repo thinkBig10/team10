@@ -64,7 +64,26 @@
         
       </div>
     </div>
-    <div id="w-node-_47fdaf22-571f-8a8a-c367-de86c311fc89-0e075d2a" class="w-layout-cell content"></div>
+    <div id="w-node-_47fdaf22-571f-8a8a-c367-de86c311fc89-0e075d2a" class="w-layout-cell contentHome">
+    <div class="text-block-5"><strong class="bold-text">DATA MANAGEMENT<br>FOR CLOTHE SHOPPING MALL BRANDS</strong></div>
+      <div class="text-block-6">We specialize in curating data exclusively for administrators of online clothing stores.<br>Simply navigate through the top navigation bar to access tailored data services. <br>Explore pages for <span class="text-span">NOTICE, USER, BRAND, PRODUCT, DELIVERY, REVIEW, COUPON, and Q&amp;A</span>, all designed to cater to your specific needs.</div>
+      <div class="text-block-8"><strong class="bold-text-2">MEET OUR TEAM</strong></div>
+      <div id="w-node-_8ccddb9b-1817-3c2d-c6fc-067b3d3c42d8-0e075d2a" class="w-layout-layout quick-stack-5 wf-layout-layout">
+        <div id="w-node-_2c37b883-cc55-dd58-2e3f-d612a90c26fe-0e075d2a" class="w-layout-cell cell memberinto"><img src="images/001.jpg" loading="lazy" alt="" class="image-15">
+          <div class="text-block-7"><strong>Minji Kwak</strong><br>2176022</div>
+        </div>
+        <div id="w-node-_456ac7fe-5edc-affe-7a74-00a072634d89-0e075d2a" class="w-layout-cell cell memberinto"><img src="images/003.jpg" loading="lazy" alt="" class="image-16">
+          <div class="text-block-7"><strong>Gahyeon Kwon</strong><br>2071059</div>
+        </div>
+        <div id="w-node-e96f015e-5c40-a21b-c84c-9c2162b2c2f3-0e075d2a" class="w-layout-cell cell memberinto"><img src="images/002.jpg" loading="lazy" alt="" class="image-17">
+          <div class="text-block-7"><strong>Boyeong Park</strong><br>2028012 <br></div>
+        </div>
+        <div id="w-node-ca0293be-835c-4180-d7e1-bba8815588ef-0e075d2a" class="w-layout-cell cell memberinto"><img src="images/004.jpg" loading="lazy" alt="" class="image-18">
+          <div class="text-block-7"><strong>Chaerin Hwang</strong><br>2176429</div>
+        </div>
+      </div>
+    </div>
+    </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6541d9f4fbd73e9498319e4c" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="js/webflow.js" type="text/javascript"></script>

@@ -1525,6 +1525,10 @@ body {
     align-items: center;
     display: flex;
   }
+
+  .cell.memberinto {
+    padding-right: 30px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -1568,6 +1572,11 @@ body {
   grid-template-rows: auto;
   grid-template-columns: .5fr 1.5fr;
   display: grid;
+}
+
+#w-node-_8ccddb9b-1817-3c2d-c6fc-067b3d3c42d8-0e075d2a {
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 #w-node-_607a5ac0-ae65-45d9-dc8c-65b4d7adb672-0e075d2a {
@@ -1682,4 +1691,85 @@ body {
 .brandlists {
   max-height: 290px;
   overflow-y: auto;
+}
+
+.contentHome {
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 1px solid #000;
+  border: 1px solid #000;
+  flex-direction: column;
+  flex-direction: column;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  justify-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: left;
+  padding: 30px 60px 25px;
+  display: flex;
+}
+
+.text-block-5 {
+  font-family: Changa One, Impact, sans-serif;
+}
+.bold-text {
+  font-size: 25px;
+}
+.text-block-6 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+}
+.text-span {
+  text-decoration: underline;
+}
+.bold-text-2 {
+  font-family: Changa One, Impact, sans-serif;
+  font-size: 25px;
+}
+.quick-stack-5 {
+  width: 100%;
+  height: 100%;
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+  margin-top: 20px;
+  padding: 0;
+}
+.cell {
+  align-items: center;
+}
+.cell.memberinto {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.text-block-7 {
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;
+  display: block;
+}
+.image-15 {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.image-16, .image-17, .image-18 {
+  width: auto;
+  height: auto;
+}
+.text-block-8 {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  display: flex;
 }
