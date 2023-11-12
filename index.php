@@ -44,7 +44,7 @@
     <a href="index.php" aria-current="page" class="link-block w-inline-block w--current"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-f02deb08-1748-36ee-2932-984c42297013-0e075d2a" class="w-layout-layout block wf-layout-layout">
-    <div id="w-node-f2afb077-a016-5d75-30ba-dcdbdaafbe58-0e075d2a" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
+    <div id="w-node-f2afb077-a016-5d75-30ba-dcdbdaafbe58-0e075d2a" class="w-layout-cell userinfo"><img src="images/userImg.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_607a5ac0-ae65-45d9-dc8c-65b4d7adb672-0e075d2a" class="w-layout-layout info wf-layout-layout">
       <?php
           session_start();

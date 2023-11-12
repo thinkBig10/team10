@@ -70,7 +70,7 @@ Time) -->
             <div
                 id="w-node-b30baabe-ca56-adbb-2114-5c1742e912c1-12a33a88"
                 class="w-layout-cell userinfo"><img
-                src="images/ThinkBig.png"
+                src="images/userImg.png"
                 loading="lazy"
                 width="100"
                 height="100"

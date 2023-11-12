@@ -46,7 +46,7 @@
     <a href="index.php" class="link-block w-inline-block"><img src="images/ThinkBig.png" loading="lazy" alt="" class="image"></a>
   </section>
   <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2e-0e075d33" class="w-layout-layout block wf-layout-layout">
-    <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2f-0e075d33" class="w-layout-cell userinfo"><img src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
+    <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e2f-0e075d33" class="w-layout-cell userinfo"><img src="images/userImg.png" loading="lazy" width="100" height="100" alt="" class="userimage">
       <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e31-0e075d33" class="w-layout-layout info wf-layout-layout">
         <div id="w-node-_84e908c7-3048-1e43-e0c1-e3228fd97e32-0e075d33" class="w-layout-cell id">
           <div class="user-info"><?php session_start(); echo $_SESSION['employeeID'];?></div>
