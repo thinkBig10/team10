@@ -118,6 +118,7 @@ CREATE TABLE wishes (
     CONSTRAINT FK_wishes_products FOREIGN KEY (productID) REFERENCES products(productID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
+/*SELECT 사용*/
 CREATE VIEW deliveryView AS
    SELECT 
         orderID,
@@ -130,18 +131,21 @@ CREATE VIEW deliveryView AS
         status
    FROM orders join brands using (brandID) join products using(productID) join users using (userID) natural join deliveries  ;
 
+/*SELECT, COUNT 사용*/
 CREATE VIEW wishCount AS
     SELECT
         productID,
         count(productID) as count
     FROM wishes GROUP BY productID;
 
+/*COUNT 사용*/
 CREATE VIEW orderCount AS
     SELECT 
         productID,
         count(productID) as count
     FROM orders GROUP BY productID;
 
+/*AVG와 GROUP BY 사용*/
 CREATE VIEW reviewRating AS
     SELECT
         productID,
