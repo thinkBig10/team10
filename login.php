@@ -1,4 +1,6 @@
 <?php
+$url = "index.php";
+header("Location: $url");
 session_start();
 #$mysqli = mysqli_connect("localhost:43306", "team10", "team10", "team10");
 include "./dbConnection.php";
@@ -25,9 +27,6 @@ if (mysqli_connect_errno()) {
                             $_SESSION['department'] = $row['department'];
                             $_SESSION['name'] = $row['name'];
 
-                            // Redirect to index.php
-                            header("Location: index.php");
-                            exit();
                         } else {
                             echo "<script>alert('Incorrect ID or Password. Please check.'); history.back();</script>";
                         }

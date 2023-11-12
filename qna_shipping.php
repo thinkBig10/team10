@@ -85,7 +85,7 @@
               echo '<div id="qnadata1" class="div-block-10">
               <div class="text-block">'.$date.'</div>
               <div class="div-block-11"><img src="images/qmark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/qmark-p-500.png 500w, images/qmark.png 512w" class="image-4">
-                <p class="paragraph-2">'.$comment.'</p>
+                <p class="paragraph-2">'.$userID.': '.$comment.'</p>
               </div>';
 
               $sqlReply = "select * from replyqna where qnaID = $qnaID";
@@ -96,12 +96,14 @@
                     while ($replyArray = mysqli_fetch_array($resReply, MYSQLI_ASSOC)) {
                         $replyID = $replyArray["qnaID"];
                         $reComment = $replyArray["comment"];
-                          echo '
-                          <div id="qnadata1_responseblock" class="div-block-12"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
-                            <p id="qnadata1_replycomment" class="paragraph-3">'.$reComment.'</p>
-                          </div>
+                        $employeeID = $replyArray["employeeID"];
+                        
+                        echo '
+                        <div id="qnadata1_responseblock" class="div-block-12"><img src="images/mark.png" loading="lazy" sizes="20px" height="20" alt="" srcset="images/mark-p-500.png 500w, images/mark.png 512w" class="image-5">
+                          <p id="qnadata1_replycomment" class="paragraph-3">'.$employeeID.': '.$reComment.'</p>
                         </div>
-                        <br>';              
+                      </div>
+                      <br>';           
                     }
                 }
                 else{
