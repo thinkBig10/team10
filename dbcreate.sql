@@ -151,3 +151,6 @@ CREATE VIEW reviewRating AS
         productID,
         format(avg(grade),2) as rating
     FROM reviews GROUP BY productID;
+
+/*인덱스 생성*/
+create index products_stock on products (stock);
