@@ -51,7 +51,7 @@
     </section>
     <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11bc-0e075d32" class="w-layout-layout block wf-layout-layout">
         <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11bd-0e075d32" class="w-layout-cell userinfo"><img
-                src="images/ThinkBig.png" loading="lazy" width="100" height="100" alt="" class="userimage">
+                src="images/userImg.png" loading="lazy" width="100" height="100" alt="" class="userimage">
             <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11bf-0e075d32"
                 class="w-layout-layout info wf-layout-layout">
                 <div id="w-node-_17ab5aa1-19f5-d367-e3c3-21d7eecd11c0-0e075d32" class="w-layout-cell id">
