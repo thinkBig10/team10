@@ -281,6 +281,7 @@ CREATE TABLE `products` (
   `stock` int(11) NOT NULL,
   PRIMARY KEY (`productID`),
   KEY `FK_products_brands` (`brandID`),
+  KEY `products_stock` (`stock`),
   CONSTRAINT `FK_products_brands` FOREIGN KEY (`brandID`) REFERENCES `brands` (`brandID`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -551,4 +552,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-08 19:32:13
+-- Dump completed on 2023-11-13 16:40:11
